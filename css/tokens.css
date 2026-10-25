@@ -1,0 +1,133 @@
+/* ============================================================
+   Vértice Climatização — Design Tokens
+   Identidade: "ar em movimento" — azul profundo (confiança técnica)
+   + ciano (fluxo de ar) + âmbar (conforto, calor humano)
+   ============================================================ */
+
+:root {
+  /* ---------- Cores de marca ---------- */
+  --brand-900: #041E33;
+  --brand-800: #072A47;
+  --brand-700: #0A3A5E;
+  --brand-600: #0B4A76;
+  --brand-500: #0066CC;
+  --brand-400: #1E86E8;
+  --brand-300: #5BADF2;
+  --brand-200: #A8D3F7;
+  --brand-100: #D9EAFD;
+
+  --aqua-600: #0096C7;
+  --aqua-500: #00B4D8;
+  --aqua-400: #3CCBEA;
+  --aqua-100: #D6F4FB;
+
+  --amber-600: #E06C1F;
+  --amber-500: #FF8C42;
+  --amber-400: #FFA766;
+  --amber-100: #FFE9D8;
+
+  /* ---------- Neutros ---------- */
+  --ink-900: #0B1622;
+  --ink-800: #16283A;
+  --ink-700: #2C4257;
+  --ink-600: #47596B;
+  --ink-500: #64768A;
+  --ink-400: #8FA1B3;
+  --ink-300: #C2CDD8;
+  --ink-200: #DEE5EC;
+  --ink-100: #EDF2F7;
+  --ink-050: #F6F9FC;
+  --white: #FFFFFF;
+
+  /* ---------- Superfícies ---------- */
+  --surface-page: #FFFFFF;
+  --surface-subtle: var(--ink-050);
+  --surface-tint: #F0F7FE;
+  --surface-dark: var(--brand-900);
+  --surface-dark-2: var(--brand-800);
+
+  /* ---------- Texto ---------- */
+  --text-strong: var(--ink-900);
+  --text-body: var(--ink-600);
+  --text-muted: var(--ink-500);
+  --text-on-dark: #EAF2FA;
+  --text-on-dark-muted: #A8BFD4;
+
+  /* ---------- Tipografia ---------- */
+  --font-display: "Archivo", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+
+  /* Escala fluida: base 16px -> clamp entre 320 e 1280 */
+  --fs-eyebrow: 0.75rem;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1rem;
+  --fs-md: clamp(1.0625rem, 0.99rem + 0.28vw, 1.1875rem);
+  --fs-lg: clamp(1.25rem, 1.13rem + 0.5vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.31rem + 0.85vw, 2rem);
+  --fs-2xl: clamp(1.875rem, 1.54rem + 1.5vw, 2.875rem);
+  --fs-3xl: clamp(2.25rem, 1.68rem + 2.55vw, 4rem);
+  --fs-4xl: clamp(2.75rem, 1.8rem + 4.2vw, 5.25rem);
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.22;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  --tracking-eyebrow: 0.16em;
+  --tracking-tight: -0.022em;
+  --tracking-wide: 0.04em;
+
+  /* ---------- Espaçamento (escala 4/8) ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 2.5rem;
+  --sp-8: 3rem;
+  --sp-9: 4rem;
+  --sp-10: 5rem;
+  --sp-11: 6.5rem;
+  --sp-12: 8rem;
+
+  --section-y: clamp(3.5rem, 2.2rem + 5.6vw, 7rem);
+  --gutter: clamp(1.125rem, 0.7rem + 2.2vw, 2.5rem);
+  --container: 1200px;
+  --container-narrow: 860px;
+
+  /* ---------- Raios ---------- */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* ---------- Sombras ---------- */
+  --sh-xs: 0 1px 2px rgba(11, 22, 34, 0.06);
+  --sh-sm: 0 2px 8px rgba(11, 22, 34, 0.07);
+  --sh-md: 0 6px 20px rgba(11, 22, 34, 0.08);
+  --sh-lg: 0 16px 44px rgba(11, 22, 34, 0.11);
+  --sh-xl: 0 30px 70px rgba(11, 22, 34, 0.16);
+  --sh-brand: 0 14px 34px rgba(0, 102, 204, 0.26);
+  --sh-brand-lg: 0 20px 48px rgba(0, 102, 204, 0.34);
+  --sh-inset-line: inset 0 0 0 1px var(--ink-200);
+
+  /* ---------- Movimento ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 260ms;
+  --dur-slow: 520ms;
+
+  /* ---------- Layout ---------- */
+  --header-h: 76px;
+  --z-base: 1;
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-toast: 300;
+}
